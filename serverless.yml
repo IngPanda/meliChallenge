@@ -24,5 +24,9 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
-  events:	
-    - http: GET hello
+
+functions:
+  hello:
+    handler: handler.hello
+    events:	
+      - http: GET hello
